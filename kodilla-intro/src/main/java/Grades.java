@@ -23,15 +23,15 @@ public class Grades {
         return result;
     }
 
+
     public int sumUp() {
         int result = 0;
         int doAverage = 0;
         for (int i=0; i<this.size; i++) {
             result = result + grades[i];
             doAverage = result/this.size;
-            System.out.println("The average grade is " + doAverage + ".");
-            return doAverage;
         }
-        return result;
+        System.out.println("The average grade is " + doAverage + ".");
+        return doAverage;
     }
 }
