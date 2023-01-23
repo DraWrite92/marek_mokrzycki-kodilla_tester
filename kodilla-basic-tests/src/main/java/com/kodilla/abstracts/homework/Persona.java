@@ -2,9 +2,11 @@ package com.kodilla.abstracts.homework;
 
 public class Persona extends Person{
     @Override
-    public void personData(String name, int age, String job) {
+    public void personData(String name, int age, Job job) {
         System.out.println(name);
         System.out.println(age);
-        System.out.println(job);
+        job.title();
+        job.salary();
+        job.responsibilities();
     }
 }

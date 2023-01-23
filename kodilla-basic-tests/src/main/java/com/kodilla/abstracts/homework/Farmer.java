@@ -2,6 +2,10 @@ package com.kodilla.abstracts.homework;
 
 public class Farmer extends Job {
     @Override
+    public void title() {
+        System.out.println("Farmer");
+    }
+    @Override
     public void salary() {
         System.out.println("$3780 per month, but that varies.");
     }
