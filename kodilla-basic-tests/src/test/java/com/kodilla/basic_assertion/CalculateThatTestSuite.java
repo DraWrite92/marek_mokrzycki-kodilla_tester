@@ -8,10 +8,10 @@ public class CalculateThatTestSuite {
     @Test
     public void testSubtraction() {
         Calculator calculator = new Calculator();
-        double a = 5;
-        double b = 8;
+        double a = 5.6;
+        double b = 5.8;
         double subtractResult = calculator.numberSubtraction(a, b);
-        assertEquals(-3, subtractResult, ResultChecker.DELTA);
+        assertEquals(-0.2, subtractResult, 0.00000001);
     }
 
     @Test
@@ -19,7 +19,7 @@ public class CalculateThatTestSuite {
         Calculator calculatorPS = new Calculator();
         double a = 5;
         double positiveSqResult = calculatorPS.numberSquared(a);
-        assertEquals(25, positiveSqResult, ResultChecker.DELTA);
+        assertEquals(25, positiveSqResult, 0.00000001);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class CalculateThatTestSuite {
         Calculator calculatorZS = new Calculator();
         double d = 0;
         double zeroSqResult = calculatorZS.numberZeroSquared(d);
-        assertEquals(0, zeroSqResult, ResultChecker.DELTA);
+        assertEquals(0, zeroSqResult, 0.00000001);
     }
 
     @Test
@@ -35,6 +35,6 @@ public class CalculateThatTestSuite {
         Calculator calculatorNS = new Calculator();
         double c = -1;
         double negativeSqResult = calculatorNS.numberNegativeSquared(c);
-        assertEquals(1, negativeSqResult, ResultChecker.DELTA);
+        assertEquals(1, negativeSqResult, 0.00000001);
     }
 }
