@@ -13,18 +13,6 @@ public class Stamp {
         this.stamped = stamped;
     }
 
-    public String getStampName() {
-        return stampName;
-    }
-
-    public String getStampDimensions() {
-        return stampDimensions;
-    }
-
-    public boolean getStamped() {
-        return stamped;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

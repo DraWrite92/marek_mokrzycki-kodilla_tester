@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CarsListApplication {
     public static void main(String[] args) {
-        List<Cadillac> car = new ArrayList<>();
+        List<Car> car = new ArrayList<>();
         car.add(new Cadillac(50));
         car.add(new Cadillac(75));
         car.add(new Cadillac(100));
