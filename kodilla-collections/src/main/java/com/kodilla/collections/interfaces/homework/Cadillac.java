@@ -1,5 +1,7 @@
 package com.kodilla.collections.interfaces.homework;
 
+import java.util.Objects;
+
 public class Cadillac implements Car {
     // This is an implementation trying to show the driving characteristic of a 1967 Cadillac Sedan de Ville.
     // If you don't know how that car is looking like, here's the link: http://www.oldcarbrochures.com/static/NA/Cadillac/1967_Cadillac/1967_Cadillac_Brochure/1967%20Cadillac-12.jpg
@@ -26,5 +28,30 @@ public class Cadillac implements Car {
 
     public int getSpeed() {
         return speed;
+    }
+
+    public int getInitSpeed() {
+        return initSpeed;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cadillac cadillac = (Cadillac) o;
+        return initSpeed == cadillac.initSpeed && speed == cadillac.speed;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(initSpeed, speed);
+    }
+
+    @Override
+    public String toString() {
+        return "Cadillac{" +
+                "initSpeed=" + initSpeed +
+                ", speed=" + speed +
+                '}';
     }
 }
