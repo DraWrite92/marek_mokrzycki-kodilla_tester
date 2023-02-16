@@ -32,12 +32,12 @@ public class CashMachine {
     }
 
     public double getSummary() {
-        if(this.amounts.length == 0) {
+        if (this.amounts.length == 0) {
             System.out.println("The total amount of money in transactions is 0.");
             return 0;
         }
         double sum = 0;
-        for(int i=0; i < this.amounts.length; i++) {
+        for (int i = 0; i < this.amounts.length; i++) {
             sum += amounts[i];
         }
         System.out.println("The sum of transactions is: " + sum);
@@ -81,20 +81,23 @@ public class CashMachine {
         int i = 0;
         countPC++;
 
-        if (amounts[i] < 0) {
-            double numberOfPaychecks = countPC-1;
-            System.out.println("The number of paychecks done is: " + numberOfPaychecks);
+        for (i = 0; i < amounts.length; i++) {
+            if (amounts[i] < 0) {
+                double numberOfPaychecks = countPC - 1;
+                System.out.println("The number of paychecks done is: " + numberOfPaychecks);
+            }
         }
     }
+        public void countThePayments () {
+            int countPM = 0;
+            int i = 0;
+            countPM++;
 
-    public void countThePayments() {
-        int countPM = 0;
-        int i = 0;
-        countPM++;
-
-        if (amounts[i] > 0) {
-            double numberOfPayments = countPM-1;
-            System.out.println("The number of payments done is: " + numberOfPayments);
+            for (i = 0; i < amounts.length; i++) {
+                if (amounts[i] > 0) {
+                    double numberOfPayments = countPM - 1;
+                    System.out.println("The number of payments done is: " + numberOfPayments);
+                }
+            }
         }
     }
-}

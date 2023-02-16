@@ -16,10 +16,10 @@ public class CashMachineTestSuite {
     @Test
     public void shouldAddSeveralActionsToArray() {
         CashMachine cashActions = new CashMachine();
-        cashActions.add(100);
-        cashActions.add(-50);
-        cashActions.add(200);
-        cashActions.add(-100);
+        cashActions.addPay(100);
+        cashActions.addCheck(-50);
+        cashActions.addPay(200);
+        cashActions.addCheck(-100);
 
         int[] amounts = cashActions.getAmounts();
         assertEquals(4, amounts.length);
