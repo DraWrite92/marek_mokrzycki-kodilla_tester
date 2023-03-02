@@ -79,11 +79,10 @@ public class CashMachine {
     public void countThePaychecks() {
         int countPC = 0;
         int i = 0;
-        countPC++;
 
         for (i = 0; i < amounts.length; i++) {
             if (amounts[i] < 0) {
-                double numberOfPaychecks = countPC - 1;
+                double numberOfPaychecks = countPC++;
                 System.out.println("The number of paychecks done is: " + numberOfPaychecks);
             }
         }
@@ -91,11 +90,10 @@ public class CashMachine {
         public void countThePayments () {
             int countPM = 0;
             int i = 0;
-            countPM++;
 
             for (i = 0; i < amounts.length; i++) {
                 if (amounts[i] > 0) {
-                    double numberOfPayments = countPM - 1;
+                    double numberOfPayments = countPM++;
                     System.out.println("The number of payments done is: " + numberOfPayments);
                 }
             }
