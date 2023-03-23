@@ -24,3 +24,5 @@ public class Calculator {
         return PI * 2 * r;
     }
 }
+
+// This is an example calculator.
